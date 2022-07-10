@@ -213,6 +213,7 @@ class SortFrame(QWidget):
         # Blocks signals to disallow user to tamper with the array size and/or start multiple sorts while one is in process
         self.size_slider.blockSignals(True)
         self.sort_bttn.blockSignals(True)
+        self.reset_bttn.blockSignals(True)
         
         arr = self.sort_graph.getData()[1]
         
@@ -234,6 +235,7 @@ class SortFrame(QWidget):
         else:
             self.size_slider.blockSignals(False)
             self.sort_bttn.blockSignals(False)
+            self.reset_bttn.blockSignals(False)
             return
          
         # When worker sends out a finished signal connects to sort_complete
@@ -251,6 +253,7 @@ class SortFrame(QWidget):
         self.sort_graph.setOpts(brushes = [colors[index] for index in range(self.arr_size)])
         self.size_slider.blockSignals(False)
         self.sort_bttn.blockSignals(False)
+        self.reset_bttn.blockSignals(False)
         
     #Links user to information about each sorting algorithm
     def about_algos(self):
