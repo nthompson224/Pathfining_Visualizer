@@ -1,3 +1,8 @@
+'''
+    Author: Nate Thompson
+    Date: July 7, 2022
+    Purpose: Sorting visualization desktop application
+'''
 from PyQt6.QtWidgets import QApplication
 
 # Main entry point for application
