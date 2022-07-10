@@ -2,6 +2,7 @@ from pyqtgraph import BarGraphItem
 
 import time
 
+# Standard sorting algorithms, some differences to allow visualization
 class Sort():
     check_color = '#E6E6E6'
     good_color = '#45D56D'

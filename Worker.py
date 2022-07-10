@@ -6,6 +6,7 @@ class WorkerSignals(QObject):
     error = pyqtSignal(tuple)
     result = pyqtSignal(int)
 
+# Worker object used for multithreading
 class Worker(QRunnable):
     def __init__(self, fn, *args, **kwargs):
         super(Worker, self).__init__()
@@ -23,4 +24,5 @@ class Worker(QRunnable):
         else:
             self.signals.result.emit(result)
         finally:
+            # Sends the finished signal
             self.signals.finished.emit()
