@@ -8,6 +8,4 @@ Visualize: Selection Sort, Bubble Sort, Merge Sort, Quick Sort, Heap Sort, Cockt
 
 Merge Sort Example:
 
-
-https://user-images.githubusercontent.com/61722541/178172632-c1c74656-e829-4a9b-b7c7-bfcb533b5e36.mp4
-
+https://user-images.githubusercontent.com/61722541/178173064-48d4e212-cc6e-4aff-87b8-3d569951bfa4.mp4
