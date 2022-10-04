@@ -1,5 +1,7 @@
 from PyQt6.QtCore import QRunnable, QObject, pyqtSignal
-import traceback, sys
+import traceback
+import sys
+
 
 class WorkerSignals(QObject):
     finished = pyqtSignal()
@@ -7,6 +9,8 @@ class WorkerSignals(QObject):
     result = pyqtSignal(int)
 
 # Worker object used for multithreading
+
+
 class Worker(QRunnable):
     def __init__(self, fn, *args, **kwargs):
         super(Worker, self).__init__()
@@ -14,7 +18,7 @@ class Worker(QRunnable):
         self.args = args
         self.kwargs = kwargs
         self.signals = WorkerSignals()
-        
+
     def run(self):
         try:
             result = self.fn(*self.args, **self.kwargs)
@@ -26,3 +30,4 @@ class Worker(QRunnable):
         finally:
             # Sends the finished signal
             self.signals.finished.emit()
+
