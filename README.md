@@ -1,4 +1,4 @@
-# Pathfining_Visualizer
+# Sorting_Visualizer
 
 Allows user to pick from 7 sorting algorthims and visualize them.
 
